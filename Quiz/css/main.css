@@ -1,0 +1,72 @@
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: #0B0C10
+}
+
+h1 {
+    text-align: center;
+    color: #0B0C10;
+}
+
+.button {
+    text-align: center;
+    background-color: #66FCF1;
+    border-color: #0B0C10;
+    color: #0B0C10;
+    padding: 15px 32px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 25px;
+    position: relative;
+}
+
+.button a {
+    text-decoration: none;
+    color: #0B0C10;
+    background-color: #66FCF1;
+    border-color: #0B0C10;
+    line-height: 25px;
+    border-width: 25px;
+}
+
+.container {
+    width: 50%;
+    margin: 150px auto;
+    padding: 50px 30px;
+    background-color: #66FCF1;
+    border-radius: 3px;
+    color: #0B0C10;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 500px;
+}
+
+ul li {
+    background: #45A29E;
+    width: 200px;
+    margin: 10px;
+    padding: 5px;
+    display: inline-block;
+}
+
+#prev {
+    display: none;
+}
+
+#start {
+    display: none;
+    width: 100px;
+}
+
+input[type="radio"] {
+    cursor: pointer;
+}
+
+@media.container {}
