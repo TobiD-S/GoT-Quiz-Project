@@ -1,4 +1,4 @@
-var qAndA = [{
+const qAndA = [{
         question: "How did Daenerys Targaryen eventually hatch her dragon eggs?",
         options: ["In a lightning storm", "In a funeral pyre", "In a fireplace", "In a frozen cave"],
         answer: "In a funeral pyre"
@@ -199,6 +199,6 @@ var qAndA = [{
     },
 ];
 
-const selectedQuestions = qAndA.slice(0, 4);
-let index = 0;
-const quiz = document.querySelector("#quiz");
+// const selectedQuestions = qAndA.slice(0, 4);
+// let index = 0;
+// const quiz = document.querySelector("#quiz");
