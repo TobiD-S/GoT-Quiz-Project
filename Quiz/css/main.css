@@ -70,12 +70,12 @@ button.finishQ {
 }
 
 .container {
-    width: 50%;
+    width: 80%;
     height: auto;
     margin-right: auto;
     margin-left: auto;
     text-align: center;
-    padding: 50px 30px;
+    padding: auto;
     background-color: #369394;
     border-radius: 3px;
     color: #0B0C10;
