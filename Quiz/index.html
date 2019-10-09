@@ -8,6 +8,7 @@
     <title>GoT Trivia</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative|Roboto&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous">
     </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
@@ -16,33 +17,31 @@
 <body>
 
     <div class="container quiz-section">
-        <h1>Game of Thrones Trivia!</h1>
+        <h1 style="font-size:8vw;" class="display-1">Game of Thrones Trivia!</h1>
         <br/>
-        <div id="quiz">
-            <p class="question-number"></p>
-            <p class="question-question"></p>
-            <div class="question-options">
-                <form>
-                    <input type="radio" name="option">
-                    <div class="opt1"></div>
-                    <input type="radio" name="option">
-                    <div class="opt2"></div>
-                    <input type="radio" name="option">
-                    <div class="opt3"></div>
-                    <input type="radio" name="option">
-                    <div class="opt4"></div>
-                </form>
+        <p class="question-number"></p>
+        <p class="question-question" style="font-size:2vw;"></p>
+        <div class="question-options container">
+            <div class="row">
+                <div class="col opt1 h3"></div>
+                <div class="col opt2 h3"></div>
+            </div>
+            <div class="row">
+                <div class="col opt3 h3"></div>
+                <div class="col opt4 h3"></div>
             </div>
         </div>
-        <p>
+
+        <!-- <p>
             <button id="Next" class="nextQ" onclick="nextQu()">Next</button>
             <button id="Finish" class="finishQ" onclick="FinishQu()">Finish</button>
-        </p>
+        </p> -->
     </div>
+    <script src="./js/quiz.js"></script>
     <script src="./js/index.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous">
     </script>
-    <script src="./js/quiz.js"></script>
+
 </body>
 
 
