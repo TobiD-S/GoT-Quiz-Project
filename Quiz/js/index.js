@@ -1,4 +1,4 @@
-const selectedQuestions = qAndA.slice(0, 4);
+const selectedQuestions = qAndA.slice(0, 5);
 let score = 0;
 let quesCounter = 0;
 let qIndex = 0;
@@ -13,15 +13,15 @@ const renderSuccess = () => {
     console.log(`Your watch ends here...final score is $score of 10`)
     $('.question-number').text('');
     $('.question-question').text('');
-    $('.option1').text('');
-    $('.option2').text('');
-    $('.option3').text('');
-    $('.option4').text('');
+    $('.opt1').text('');
+    $('.opt2').text('');
+    $('.opt3').text('');
+    $('.opt4').text('');
     if (score >= 6) {
         $("<p>You have proven yourself...<br/> Here's a sword in your honor</p>").appendTo('.question-question');
         $('<img src="https://media.giphy.com/media/ehhuGD0nByYxO/giphy.gif">').appendTo('.question-options');
     } else {
-        $('<p>Come back when you know more...till then</p>').appendTo('.question-question');
+        $('<p>Come back when you know more...till then, </p>').appendTo('.question-question');
         $('<img src="https://media.giphy.com/media/gdMbK9Xa5bVHdv9R5x/giphy.gif">').appendTo('.question-options');
     }
 }
@@ -30,10 +30,10 @@ const renderQuestion = (qIndex) => {
     let question = selectedQuestions[qIndex];
     $('.question-number').text('');
     $('.question-question').text('');
-    $('.option1').text('');
-    $('.option2').text('');
-    $('.option3').text('');
-    $('.option4').text('');
+    $('.opt1').text('');
+    $('.opt2').text('');
+    $('.opt3').text('');
+    $('.opt4').text('');
     $('.question-number').text('Question ' + (qIndex + 1));
     $('.question-question').text(question.question);
     // get question-options and populate with options as radio
@@ -45,12 +45,12 @@ const renderQuestion = (qIndex) => {
         radioLabel.appendTo(opt);
     });
     $(".question-options input:radio[name='answer']").click(function() {
-        if (questionIndex == (selectQuestions.length - 1)) {
+        if (qIndex == (selectedQuestions.length - 1)) {
             gradeQuestion(this.value)
             renderSuccess()
         } else {
             gradeQuestion(this.value)
-            renderQuestion(questionIndex)
+            renderQuestion(qIndex)
         }
     });
 };
@@ -59,7 +59,7 @@ const renderQuestion = (qIndex) => {
 
 
 $(document).ready(function() {
-    renderQuestion(questionIndex);
+    renderQuestion(qIndex);
 };);
 
 

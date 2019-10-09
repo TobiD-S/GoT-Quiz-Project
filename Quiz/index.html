@@ -15,21 +15,24 @@
 
 <body>
 
-    <div class="container">
+    <div class="container quiz-section">
         <h1>Game of Thrones Trivia!</h1>
         <br/>
         <div id="quiz">
-            <div class="question"></div>
-            <form>
-                <input type="radio" name="option">
-                <div class="opt1"></div>
-                <input type="radio" name="option">
-                <div class="opt2"></div>
-                <input type="radio" name="option">
-                <div class="opt3"></div>
-                <input type="radio" name="option">
-                <div class="opt4"></div>
-            </form>
+            <p class="question-number"></p>
+            <p class="question-question"></p>
+            <div class="question-options">
+                <form>
+                    <input type="radio" name="option">
+                    <div class="opt1"></div>
+                    <input type="radio" name="option">
+                    <div class="opt2"></div>
+                    <input type="radio" name="option">
+                    <div class="opt3"></div>
+                    <input type="radio" name="option">
+                    <div class="opt4"></div>
+                </form>
+            </div>
         </div>
         <p>
             <button id="Next" class="nextQ" onclick="nextQu()">Next</button>
