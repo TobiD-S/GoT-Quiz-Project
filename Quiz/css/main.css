@@ -1,5 +1,5 @@
 body {
-    background: url(../images/background2.jpg) no-repeat center center fixed;
+    background: url(http://vignette2.wikia.nocookie.net/gameofthrones/images/7/7e/The_known_world_HBO.jpg/revision/latest/scale-to-width-down/2000?cb=20130507121142) no-repeat center center fixed;
     font-family: 'Roboto', sans-serif;
     background-color: #0B0C10;
     -webkit-background-size: cover;
@@ -76,9 +76,12 @@ button.finishQ {
     margin-left: auto;
     text-align: center;
     padding: auto;
-    background-color: #369394;
     border-radius: 3px;
     color: #0B0C10;
+}
+
+.row {
+    font-size: 2vw;
 }
 
 ul {
