@@ -1,66 +1,66 @@
-const selectedQuestions = qAndA.slice(0, 5);
-let score = 0;
-let quesCounter = 0;
-let qIndex = 0;
+// const selectedQuestions = qAndA.slice(0, 5);
+// let score = 0;
+// let quesCounter = 0;
+// let quesIndex = 0;
 
-const scoreQuestion = (ans) => {
-    if (ans == selectedQuestions[qIndex].answer) {
-        score += 2;
-    }
-    qIndex += 1;
-};
-const renderSuccess = () => {
-    console.log(`Your watch ends here...final score is $score of 10`)
-    $('.question-number').text('');
-    $('.question-question').text('');
-    $('.opt1').text('');
-    $('.opt2').text('');
-    $('.opt3').text('');
-    $('.opt4').text('');
-    if (score >= 6) {
-        $("<p>You have proven yourself...<br/> Here's a sword in your honor</p>").appendTo('.question-question');
-        $('<img src="https://media.giphy.com/media/ehhuGD0nByYxO/giphy.gif">').appendTo('.question-options');
-    } else {
-        $('<p>Come back when you know more...till then, </p>').appendTo('.question-question');
-        $('<img src="https://media.giphy.com/media/gdMbK9Xa5bVHdv9R5x/giphy.gif">').appendTo('.question-options');
-    }
-}
+// const scoreQuestion = (ans) => {
+//     if (ans == selectedQuestions[quesIndex].answer) {
+//         score += 2;
+//     }
+//     quesIndex += 1;
+// };
+// const renderSuccess = () => {
+//     console.log(`Your watch ends here...final score is $score of 10`)
+//     $('.question-number').text('');
+//     $('.question-question').text('');
+//     $('.opt1').text('');
+//     $('.opt2').text('');
+//     $('.opt3').text('');
+//     $('.opt4').text('');
+//     if (score >= 6) {
+//         $("<p>You have proven yourself...<br/> Here's a sword in your honor</p>").appendTo('.question-question');
+//         $('<img src="https://media.giphy.com/media/ehhuGD0nByYxO/giphy.gif">').appendTo('.question-options');
+//     } else {
+//         $('<p>Come back when you know more...till then, </p>').appendTo('.question-question');
+//         $('<img src="https://media.giphy.com/media/gdMbK9Xa5bVHdv9R5x/giphy.gif">').appendTo('.question-options');
+//     }
+// }
 
-const renderQuestion = (qIndex) => {
-    let question = selectedQuestions[qIndex];
-    $('.question-number').text('');
-    $('.question-question').text('');
-    $('.opt1').text('');
-    $('.opt2').text('');
-    $('.opt3').text('');
-    $('.opt4').text('');
-    $('.question-number').text('Question ' + (qIndex + 1));
-    $('.question-question').text(question.question);
-    // get question-options and populate with options as radio
-    question.options.forEach((element, i) => {
-        let opt = '.option' + (i + 1);
-        let radioBut = $('<input type="radio" name="answer" value=' + element + ' />');
-        let radioLabel = $('<label for=' + element + ' >' + element + ' </label>');
-        radioBut.appendTo(opt);
-        radioLabel.appendTo(opt);
-    });
-    $(".question-options input:radio[name='answer']").click(function() {
-        if (qIndex == (selectedQuestions.length - 1)) {
-            gradeQuestion(this.value)
-            renderSuccess()
-        } else {
-            gradeQuestion(this.value)
-            renderQuestion(qIndex)
-        }
-    });
-};
+// const renderQuestion = (qIndex) => {
+//     let question = selectedQuestions[qIndex];
+//     $('.question-number').text('');
+//     $('.question-question').text('');
+//     $('.opt1').text('');
+//     $('.opt2').text('');
+//     $('.opt3').text('');
+//     $('.opt4').text('');
+//     $('.question-number').text('Question ' + (qIndex + 1));
+//     $('.question-question').text(question.question);
+//     // get question-options and populate with options as radio
+//     question.options.forEach((element, i) => {
+//         let opt = '.option' + (i + 1);
+//         let radioBut = $('<input type="radio" name="answer" value=' + element + ' />');
+//         let radioLabel = $('<label for=' + element + ' >' + element + ' </label>');
+//         radioBut.appendTo(opt);
+//         radioLabel.appendTo(opt);
+//     });
+//     $(".question-options input:radio[name='answer']").click(function() {
+//         if (qIndex == (selectedQuestions.length - 1)) {
+//             gradeQuestion(this.value)
+//             renderSuccess()
+//         } else {
+//             gradeQuestion(this.value)
+//             renderQuestion(qIndex)
+//         }
+//     });
+// };
 
-// on click on options run function gradeQuestion(e)
+// // on click on options run function gradeQuestion(e)
 
 
-$(document).ready(function() {
-    renderQuestion(qIndex);
-};);
+// $(document).ready(function() {
+//     renderQuestion(qIndex);
+// };);
 
 
 
