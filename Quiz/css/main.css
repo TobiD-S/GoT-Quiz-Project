@@ -1,6 +1,6 @@
 body {
     background: url(../images/background2.jpg) no-repeat center center fixed;
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
     background-color: #0B0C10;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -11,6 +11,10 @@ body {
 h1 {
     text-align: center;
     color: #0B0C10;
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 80%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
@@ -43,7 +47,7 @@ button.nextQ {
     background-color: #369394;
     border-color: #0B0C10;
     color: #0B0C10;
-    padding: 15px 32px;
+    padding: auto;
     text-align: center;
     text-decoration: none;
     display: inline-flex;
@@ -57,7 +61,7 @@ button.finishQ {
     border-color: #0B0C10;
     color: #0B0C10;
     display: inline-flex;
-    padding: 15px 32px;
+    padding: auto;
     text-align: center;
     text-decoration: none;
     font-size: 16px;
@@ -67,7 +71,10 @@ button.finishQ {
 
 .container {
     width: 50%;
-    margin: 150px auto;
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
     padding: 50px 30px;
     background-color: #369394;
     border-radius: 3px;
