@@ -1,11 +1,12 @@
 body {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(http://vignette2.wikia.nocookie.net/gameofthrones/images/7/7e/The_known_world_HBO.jpg/revision/latest/scale-to-width-down/2000?cb=20130507121142) no-repeat center center fixed;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Cinzel Decorative', cursive;
     background-color: #0B0C10;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    font-size: 16px;
 }
 
 h1 {
@@ -23,15 +24,6 @@ h1 {
     width: 100%;
     margin-top: 50px;
 }
-
-
-/* .dimmer {
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(1, 1, 1, 0.5);
-    z-index: -9;
-} */
 
 .ice {
     animation: iceGlow 5s infinite;
@@ -75,11 +67,20 @@ h1 {
     text-align: center;
     padding: auto;
     border-radius: 3px;
-    color: #fff;
 }
 
 .row {
     font-size: 2vw;
+}
+
+.ques {
+    background: linear-gradient(120deg, burlywood, peru, tan, burlywood, peru);
+    color: #0B0C10;
+}
+
+.question-options {
+    background: linear-gradient(120deg, burlywood, peru, tan, burlywood, peru);
+    color: #0B0C10;
 }
 
 input[type="radio"] {
