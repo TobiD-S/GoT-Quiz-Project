@@ -209,7 +209,9 @@ let score = 0;
 let qIndex = 0;
 
 const scoreQuestion = (ans) => {
+
     if (ans == selectedQuestions[qIndex].answer) {
+        console.log("I am called")
         score += 2;
     }
     qIndex += 1;
@@ -246,9 +248,19 @@ const renderQuestion = (quesIndex) => {
         let opt = '.opt' + (i + 1);
         let radioBut = $('<input type="radio" name="answer" value=' + element + ' />');
         let radioLabel = $('<label for=' + element + ' >' + element + ' </label>');
+        // radioBut.click(function() {
+        //     if (qIndex == (selectedQuestions.length - 1)) {
+        //         scoreQuestion(this.value)
+        //         renderSuccess()
+        //     } else {
+        //         scoreQuestion(this.value)
+        //         renderQuestion(qIndex)
+        //     }
+        // });
         radioBut.appendTo(opt);
         radioLabel.appendTo(opt);
     });
+
     $(".question-options input:radio[name='answer']").click(function() {
         if (qIndex == (selectedQuestions.length - 1)) {
             scoreQuestion(this.value)
